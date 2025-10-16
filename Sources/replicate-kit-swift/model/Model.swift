@@ -7,6 +7,21 @@
 
 import Foundation
 
+/// Represents a model object returned by the Replicate API.
+///
+/// This structure is conceptually similar to an MCP (Model Context Protocol) entity:
+/// it serves as a **"passport"** for an AI model, describing its **identity**, **origin**,
+/// **visibility**, and **latest version** within the system.
+///
+/// In MCP terms:
+/// - `owner`, `name`, and `url` → define the model’s **identity/context**
+/// - `description`, `visibility` → define its **metadata and meaning**
+/// - `github_url`, `paper_url`, `license_url` → represent **provenance** (source and license)
+/// - `latest_version` → represents the model’s **state/version**
+///
+/// Together, this mirrors the MCP concept of a model having a defined context,
+/// provenance, and operational metadata — essentially a **digital passport**
+/// for AI agents or models.
 ///The response is a model object in the following format
 @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public struct Model: Hashable, Decodable {
